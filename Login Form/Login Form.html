@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif;}
+        form {border: 3px solid #e8ffbe;}
+
+        div p input {
+            width: 100%;
+            border-radius: 4px;
+            margin: 2px;
+            box-sizing: border-box;
+        }
+        input[type=text]input[type=password] {
+          width: 300px;
+          padding: 30px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #f3efca;
+          border-radius: 14px;
+          box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgba(23, 126, 23, 0.89);
+            color: rgb(243, 245, 237);
+            padding: 14px 20px;   
+            margin: 8px 0;
+            border: rgb(199, 231, 125);
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+          width: 30%;
+          padding: 10px 18px;
+          background-color: rgb(255, 0, 0);  
+        }
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 50%;
+            border-radius: 60%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        @media screen and (max-width:300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>MK Player Login Form.</title>
+</head>
+<body>
+    
+    <h1 style="color: rgb(76, 133, 23);">MK Player</h1>
+    <p style="color: darkgreen;">...music reconnected.</p>
+    <h4>Login Form</h4>
+
+    <form action="/action_page.php"method="post">
+        <div class="imgcontainer">
+            <img src="IMG_20240710_113508_174.jpg">
+        </div>
+
+        <div class="container">
+            <label for="uname">
+        <b>Username</b></label>
+            <p><input type="text"
+        placeholder="Enter your name here"
+        name="uname" required></p>
+
+        <label for="psw">
+    <b>Account Password</b></label>
+        <p><input type="password"
+    placeholder="Enter password (8 characters)"
+    name="psw" required></p>    
+
+    <button
+    type="submit"><a href="MK Player Home.url">Login</a></button>
+        <label>
+            <input type="checkbox"
+    checked="checked" name="remember">
+    Remember Account.        
+        </label>       
+        </div>
+
+        <div class="container"
+    style="background-color: white;">
+        <button type="button"
+    class="cancelbtn">Cancel</button>
+      </div>      
+    </form>
+    <p><h5 style="color: darkslategrey;">Hint: Do not bother about the risk.Just click or tap the login button, save your account with google and you will be transferred to MK Player.com to play songs freely online.</h5></p>
+</body>
+</html>

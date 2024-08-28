@@ -1,0 +1,47 @@
+div.form{
+    background: linear-gradient(45deg, rgb(240, 255, 30), rgb(243, 12, 12), rgba(39, 25, 230, 0.993));
+    width: 12cm;
+    padding: 10px 20px;
+    border-radius: 16px;
+}
+
+label{
+    width: 140px;
+    display: inline-block;
+    margin: 0.2ch;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+input{
+    padding: 4px;
+    margin: 5px;
+    font-size: 16px;
+    border: 1px solid yellow;
+    border-radius: 9px;
+    width: 7cm;
+}
+
+input#submit{
+    margin-top: 7px;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 4px;
+    background-color: rgb(9, 81, 148);
+}
+
+input#submit:hover{
+    background-color: green;
+    color:aliceblue;
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    color: rgba(227, 243, 6, 0.897);
+    font-size: 24px;
+}
+
+h1{
+    text-align: center;
+}
