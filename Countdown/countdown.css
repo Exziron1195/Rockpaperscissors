@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bimm.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+
+.logo{
+    width: 300px;
+    padding: 20px 0;
+    color: rgb(255, 247, 247);
+    cursor: pointer;
+    font-family: '';
+}
+
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.content h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+.content h1 span{
+    color: rgb(212, 52, 52);
+}
+
+.content button{
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.launch_time{
+    display: flex;
+}
+.launch_time div{
+    flex-basis: 100px;
+}
+.launch_time div p{
+    font-size: 60px;
+    margin-bottom: -8px
+}
+
+.rocket{
+    width: 250px;
+    padding: 20px ;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 65%;
+    right: 10%;
+    bottom: 5;
+    animation: rocket 4s linear infinite;
+}
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 105%;
+        opacity: 1.2;
+    }
+}
