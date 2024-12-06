@@ -7,10 +7,20 @@
         background: linear-gradient(25deg, rgba(114, 3, 3, 0.247),  rgba(11, 6, 68, 0.993), rgba(89, 255, 12, 0.192));;
         color: white;
         font-family: Arial;
-        margin-left: 37%;
-        height: 600%;
+        width: 100vw;
       }
-
+      .container{
+        width: 90vw;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin: auto;
+        height: 100vh;
+        
+      }
       .title {
         font-size: 30px;
         font-weight: bold;
@@ -19,7 +29,12 @@
       .move-icon {
         height: 50px;
       }
-
+      .btns{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
       .move-button {
         width: 120px;
         height: 120px;
@@ -27,40 +42,54 @@
         border: 3px solid white;
 
         background-color: transparent;
-        margin-right: 10px;
+        /* margin-right: 10px; */
         cursor: pointer;
       }
-
-      .result {
-        font-size: 25px;
-        font-weight: bold;
-        margin-top: 50px;
-        margin-left: 135px;
+      p{
+        margin-top: 15px;
       }
+/*    p{
+}
+      .result {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 50px auto 0;
+        
+      } */
+/* 
+      #res{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 50px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: brown;
+      } */
 
-      .score {
+      /* .score {
         margin-top: 60px;
         margin-left: 95px;
-      }
+      } */
 
       .reset-score-button {
         background-color: white;
         border-radius: 10px;
         border: 4px solid yellow;
         font-size: 15px;
-        padding: 8px 15px;
+        /* padding: 8px 15px; */
         cursor: pointer;
-        margin-left: 135px;
+        /* margin-left: 135px; */
       }
       .pr{
-        padding-top: 100px;
+        /* padding-top: 120px; */
         font-size: larger;
         color: aquamarine;
-        margin-left: 20px;
+        /* margin-left: 20px; */
       }
-      .js-moves-chosen{
+      /* .js-moves-chosen{
         margin-left: 95px;
-      }
+      } */
       @media screen {
         body {
         background-color: rgb(25, 25, 25);
@@ -69,17 +98,17 @@
       }
 
       .title {
-        font-size: 35px;
+        font-size: 25px;
         font-weight: bold;
       }
 
       .move-icon {
-        height: 50px;
+        height: 30px;
       }
 
       .move-button {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         border-radius: 60px;
         border: 3px solid white;
 
@@ -87,19 +116,19 @@
         margin-right: 10px;
         cursor: pointer;
       }
-
+/* 
       .result {
         font-size: 25px;
         font-weight: bold;
         margin-top: 50px;
-      }
-
+      } */
+/* 
       .score {
         margin-top: 60px;
-      }
+      } */
 
       .reset-score-button {
-        size: 120;
+        size: 80;
         background-color: white;
         border-radius: 10px;
         border: 3px solid rgba(255, 230, 0, 0.938);
@@ -111,41 +140,46 @@
     </style>
   </head>
   <body>
-    <p class="title">Rock Paper Scissors</p>
+    <div  class="container">
+      
+      <p class="title">Rock Paper Scissors</p>
+      <div class="btns">
 
-    <button onclick="
-      makeMove('rock');
-    " class="move-button">
-      <img class="move-icon" src="Imagez/rock-emoji.png" alt="ROCK">
-    </button>
-
-    <button onclick="
-      makeMove('paper');
-    " class="move-button">
-      <img class="move-icon" src="Imagez/paper-emoji.png">
-    </button>
-
-    <button onclick="
-      makeMove('scissors');
-    " class="move-button">
-      <img class="move-icon" src="Imagez/scissors-emoji.png">
-    </button>
-
-    <p class="result js-result"></p>
-    <p class="js-moves-chosen"></p>
-
-    <p class="score js-score"></p>
-    <button class="reset-score-button" onclick="
-      resetScore();
-    ">
-      Reset Score
-    </button>
-    <p class="pr">
-      Zoom in for better experience if on phone
-    </p>
-    <p style="margin-left: 120px;">
-      c. 2024 Exziron PLC
-    </p>
+        <button onclick="
+          makeMove('rock');
+        " class="move-button">
+          <img class="move-icon" src="Imagez/rock-emoji.png" alt="ROCK">
+        </button>
+    
+        <button onclick="
+          makeMove('paper');
+        " class="move-button">
+          <img class="move-icon" src="Imagez/paper-emoji.png">
+        </button>
+    
+        <button onclick="
+          makeMove('scissors');
+        " class="move-button">
+          <img class="move-icon" src="Imagez/scissors-emoji.png">
+        </button>
+      </div>
+  
+      <p class="result js-result" id="res"></p>
+      <p class="js-moves-chosen"></p>
+  
+      <p class="score js-score"></p>
+      <button class="reset-score-button" onclick="
+        resetScore();
+      ">
+        Reset Score
+      </button>
+      <p class="pr">
+        Zoom in for better experience if on phone
+      </p>
+      <p >
+        c. 2024 Exziron PLC
+      </p>
+    </div>
 
     <script>
       let score = {
