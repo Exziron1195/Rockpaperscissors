@@ -1,0 +1,38 @@
+[
+    {
+        "image": "Imagez/chili dog.png",
+        "name": "chili"
+    },
+    {
+        "image": "Imagez/grapes.png",
+        "name": "grapes"
+    },
+    {
+        "image": "Imagez/lemon.png",
+        "name": "lemon"
+    },
+    {
+        "image": "Imagez/orange.png",
+        "name": "orange"
+    },
+    {
+        "image": "Imagez/pineapple.png",
+        "name": "pineapple"
+    },
+    {
+        "image": "Imagez/strawberry.png",
+        "name": "strawberry"
+    },
+    {
+        "image": "Imagez/tomato.png",
+        "name": "tomato"
+    },
+    {
+        "image": "Imagez/watermelon.png",
+        "name": "watermelon"
+    },
+    {
+        "image": "Imagez/cherries.png",
+        "name": "cherries"
+    }
+]
