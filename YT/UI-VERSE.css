@@ -1,0 +1,961 @@
+/* From Uiverse.io by Smit-Prajapati */ 
+body{
+    background-color: #292626a2;
+}
+
+.parent {
+    width: 290px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .card {
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgb(0, 255, 214) 0%, rgb(8, 226, 96) 100%);
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+  }
+  
+  .glass {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+    /* -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
+    transform: translate3d(0px, 0px, 25px);
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .content {
+    padding: 100px 60px 0px 30px;
+    transform: translate3d(0, 0, 26px);
+  }
+  
+  .content .title {
+    display: block;
+    color: #00894d;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  .content .text {
+    display: block;
+    color: rgba(0, 137, 78, 0.7647058824);
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  
+  .bottom {
+    padding: 10px 12px;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate3d(0, 0, 26px);
+  }
+  
+  .bottom .view-more {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-end;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .bottom .view-more:hover {
+    transform: translate3d(0, 0, 10px);
+  }
+  
+  .bottom .view-more .view-more-button {
+    background: none;
+    border: none;
+    color: #00c37b;
+    font-weight: bolder;
+    font-size: 12px;
+  }
+  
+  .bottom .view-more .svg {
+    fill: none;
+    stroke: #00c37b;
+    stroke-width: 3px;
+    max-height: 15px;
+  }
+  
+  .bottom .social-buttons-container {
+    display: flex;
+    gap: 10px;
+    transform-style: preserve-3d;
+  }
+  
+  .bottom .social-buttons-container .social-button {
+    width: 30px;
+    aspect-ratio: 1;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
+  }
+  
+  .bottom .social-buttons-container .social-button:first-child {
+    transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+  }
+  
+  .bottom .social-buttons-container .social-button:nth-child(2) {
+    transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+  }
+  
+  .bottom .social-buttons-container .social-button:nth-child(3) {
+    transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+  }
+  
+  .bottom .social-buttons-container .social-button .svg {
+    width: 15px;
+    fill: #00894d;
+  }
+  
+  .bottom .social-buttons-container .social-button:hover {
+    background: black;
+  }
+  
+  .bottom .social-buttons-container .social-button:hover .svg {
+    fill: white;
+  }
+  
+  .bottom .social-buttons-container .social-button:active {
+    background: rgb(255, 234, 0);
+  }
+  
+  .bottom .social-buttons-container .social-button:active .svg {
+    fill: black;
+  }
+  
+  .logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-style: preserve-3d;
+  }
+  
+  .logo .circle {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(0, 249, 203, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .logo .circle1 {
+    width: 170px;
+    transform: translate3d(0, 0, 20px);
+    top: 8px;
+    right: 8px;
+  }
+  
+  .logo .circle2 {
+    width: 140px;
+    transform: translate3d(0, 0, 40px);
+    top: 10px;
+    right: 10px;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    transition-delay: 0.4s;
+  }
+  
+  .logo .circle3 {
+    width: 110px;
+    transform: translate3d(0, 0, 60px);
+    top: 17px;
+    right: 17px;
+    transition-delay: 0.8s;
+  }
+  
+  .logo .circle4 {
+    width: 80px;
+    transform: translate3d(0, 0, 80px);
+    top: 23px;
+    right: 23px;
+    transition-delay: 1.2s;
+  }
+  
+  .logo .circle5 {
+    width: 50px;
+    transform: translate3d(0, 0, 100px);
+    top: 30px;
+    right: 30px;
+    display: grid;
+    place-content: center;
+    transition-delay: 1.6s;
+  }
+  
+  .logo .circle5 .svg {
+    width: 20px;
+    fill: white;
+  }
+  
+  .parent:hover .card {
+    transform: rotate3d(1, 1, 0, 30deg);
+    box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+  }
+  
+  .parent:hover .card .bottom .social-buttons-container .social-button {
+    transform: translate3d(0, 0, 50px);
+    box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+  }
+  
+  .parent:hover .card .logo .circle2 {
+    transform: translate3d(0, 0, 60px);
+  }
+  
+  .parent:hover .card .logo .circle3 {
+    transform: translate3d(0, 0, 80px);
+  }
+  
+  .parent:hover .card .logo .circle4 {
+    transform: translate3d(0, 0, 100px);
+  }
+  
+  .parent:hover .card .logo .circle5 {
+    transform: translate3d(0, 0, 120px);
+  }
+
+  /* From Uiverse.io by MuhammadHasann */ 
+.toggle-cont {
+    --primary: #54a8fc;
+    --light: #d9d9d9;
+    --dark: #121212;
+    --gray: #414344;
+  
+    position: relative;
+    z-index: 10;
+  
+    width: fit-content;
+    height: 50px;
+  
+    border-radius: 9999px;
+    top: 20px;
+    left: 15px;
+  }
+  
+  .toggle-cont .toggle-input {
+    display: none;
+  }
+  
+  .toggle-cont .toggle-label {
+    --gap: 5px;
+    --width: 50px;
+  
+    cursor: pointer;
+  
+    position: relative;
+    display: inline-block;
+  
+    padding: 0.5rem;
+    width: calc((var(--width) + var(--gap)) * 2);
+    height: 100%;
+    background-color: var(--dark);
+  
+    border: 1px solid #777777;
+    border-bottom: 0;
+  
+    border-radius: 9999px;
+    box-sizing: content-box;
+    transition: all 0.3s ease-in-out;
+  }
+  .toggle-label::before {
+    content: "";
+  
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: calc(100% + 1.5rem);
+    height: calc(100% + 1.5rem);
+    background-color: var(--gray);
+  
+    border: 1px solid #777777;
+    border-bottom: 0;
+    border-radius: 9999px;
+  
+    transition: all 0.3s ease-in-out;
+  }
+  .toggle-label::after {
+    content: "";
+  
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+      circle at 50% -100%,
+      rgb(58, 155, 252) 0%,
+      rgba(12, 12, 12, 1) 80%
+    );
+  
+    border-radius: 9999px;
+  }
+  
+  .toggle-cont .toggle-label .cont-icon {
+    position: relative;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+    width: var(--width);
+    height: 50px;
+    background-image: radial-gradient(
+      circle at 50% 0%,
+      #666666 0%,
+      var(--gray) 100%
+    );
+  
+    border: 1px solid #aaaaaa;
+    border-bottom: 0;
+    border-radius: 9999px;
+    box-shadow: inset 0 -0.15rem 0.15rem var(--primary),
+      inset 0 0 0.5rem 0.75rem var(--second);
+  
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cont-icon {
+    overflow: clip;
+    position: relative;
+  }
+  
+  .cont-icon .sparkle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    display: block;
+  
+    width: calc(var(--width) * 1px);
+    aspect-ratio: 1;
+    background-color: var(--light);
+  
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    rotate: calc(1deg * var(--deg));
+    transform: translate(-50%, -50%);
+    animation: sparkle calc(100s / var(--duration)) linear
+      calc(0s / var(--duration)) infinite;
+  }
+  
+  @keyframes sparkle {
+    to {
+      width: calc(var(--width) * 0.5px);
+      transform: translate(2000%, -50%);
+    }
+  }
+  
+  .cont-icon .icon {
+    width: 1.1rem;
+    fill: var(--light);
+  }
+  
+  .toggle-cont:has(.toggle-input:checked) {
+    --checked: true;
+  }
+  
+  @container style(--checked: true) {
+    .toggle-cont .toggle-label {
+      background-color: #41434400;
+  
+      border: 1px solid #3d6970;
+      border-bottom: 0;
+    }
+  
+    .toggle-cont .toggle-label::before {
+      box-shadow: 0 1rem 2.5rem -2rem #0080ff;
+    }
+  
+    .toggle-cont .toggle-label .cont-icon {
+      overflow: visible;
+  
+      background-image: radial-gradient(
+        circle at 50% 0%,
+        #045ab1 0%,
+        var(--primary) 100%
+      );
+  
+      border: 1px solid var(--primary);
+      border-bottom: 0;
+  
+      transform: translateX(calc((var(--gap) * 2) + 100%)) rotate(-225deg);
+    }
+  
+    .toggle-cont .toggle-label .cont-icon .sparkle {
+      z-index: -10;
+  
+      width: calc(var(--width) * 1.5px);
+      background-color: #acacac;
+  
+      animation: sparkle calc(100s / var(--duration)) linear
+        calc(10s / var(--duration)) infinite;
+    }
+  
+    @keyframes sparkle {
+      to {
+        width: calc(var(--width) * 1px);
+        transform: translate(5000%, -50%);
+      }
+    }
+  }
+  
+  /* From Uiverse.io by Na3ar-17 */ 
+.container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .label {
+    background-color: transparent;
+    border: 2px solid rgb(91, 91, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 160px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    transition: all 0.4s ease;
+    border-radius: 100%;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .input {
+    display: none;
+  }
+  
+  .label .title {
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 18px;
+    bottom: 14px;
+    text-align: center;
+    top: 1.7px;
+  }
+  
+  .label .title:last-child {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgb(91, 91, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  .label .circle .icon {
+    color: #fff;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .label .circle .square {
+    aspect-ratio: 1;
+    width: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .label .circle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #3333a8;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .label:has(.input:checked) {
+    width: 57px;
+    animation: installed 0.4s ease 3.5s forwards;
+  }
+  
+  .label:has(.input:checked)::before {
+    animation: rotate 3s ease-in-out 0.4s forwards;
+  }
+  
+  .label .input:checked + .circle {
+    animation:
+      pulse 1s forwards,
+      circleDelete 0.2s ease 3.5s forwards;
+    rotate: 180deg;
+  }
+  
+  .label .input:checked + .circle::before {
+    animation: installing 3s ease-in-out forwards;
+  }
+  
+  .label .input:checked + .circle .icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .input:checked ~ .circle .square {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .label .input:checked ~ .title {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .label .input:checked ~ .title:last-child {
+    animation: showInstalledMessage 0.4s ease 3.5s forwards;
+  }
+  
+  @keyframes pulse {
+    0% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+      scale: 1;
+      box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+    100% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes installing {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(-90deg) translate(27px) rotate(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    99% {
+      transform: rotate(270deg) translate(27px) rotate(270deg);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes installed {
+    100% {
+      width: 150px;
+      border-color: rgb(35, 174, 35);
+    }
+  }
+  
+  @keyframes circleDelete {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes showInstalledMessage {
+    100% {
+      opacity: 1;
+      visibility: visible;
+      right: 56px;
+    }
+  }
+  
+  /* From Uiverse.io by JaydipPrajapati1910 */ 
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+  }
+  
+  .button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+  }
+  
+  .button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+  }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  .button.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  #button-3 .knobs:before {
+    content: "YES";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  }
+  
+  #button-3 .checkbox:active + .knobs:before {
+    width: 46px;
+    border-radius: 100px;
+  }
+  
+  #button-3 .checkbox:checked:active + .knobs:before {
+    margin-left: -26px;
+  }
+  
+  #button-3 .checkbox:checked + .knobs:before {
+    content: "NO";
+    left: 42px;
+    background-color: #f44336;
+  }
+  
+  #button-3 .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
+  }
+
+  /* From Uiverse.io by Nawsome */ 
+.boxes {
+    --size: 32px;
+    --duration: 800ms;
+    height: calc(var(--size) * 2);
+    width: calc(var(--size) * 3);
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    margin-top: calc(var(--size) * 1.5 * -1);
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+  }
+  
+  .boxes .box {
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .boxes .box:nth-child(1) {
+    transform: translate(100%, 0);
+    -webkit-animation: box1 var(--duration) linear infinite;
+    animation: box1 var(--duration) linear infinite;
+  }
+  
+  .boxes .box:nth-child(2) {
+    transform: translate(0, 100%);
+    -webkit-animation: box2 var(--duration) linear infinite;
+    animation: box2 var(--duration) linear infinite;
+  }
+  
+  .boxes .box:nth-child(3) {
+    transform: translate(100%, 100%);
+    -webkit-animation: box3 var(--duration) linear infinite;
+    animation: box3 var(--duration) linear infinite;
+  }
+  
+  .boxes .box:nth-child(4) {
+    transform: translate(200%, 0);
+    -webkit-animation: box4 var(--duration) linear infinite;
+    animation: box4 var(--duration) linear infinite;
+  }
+  
+  .boxes .box > div {
+    --background: #5C8DF6;
+    --top: auto;
+    --right: auto;
+    --bottom: auto;
+    --left: auto;
+    --translateZ: calc(var(--size) / 2);
+    --rotateY: 0deg;
+    --rotateX: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    top: var(--top);
+    right: var(--right);
+    bottom: var(--bottom);
+    left: var(--left);
+    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+  }
+  
+  .boxes .box > div:nth-child(1) {
+    --top: 0;
+    --left: 0;
+  }
+  
+  .boxes .box > div:nth-child(2) {
+    --background: #145af2;
+    --right: 0;
+    --rotateY: 90deg;
+  }
+  
+  .boxes .box > div:nth-child(3) {
+    --background: #447cf5;
+    --rotateX: -90deg;
+  }
+  
+  .boxes .box > div:nth-child(4) {
+    --background: #DBE3F4;
+    --top: 0;
+    --left: 0;
+    --translateZ: calc(var(--size) * 3 * -1);
+  }
+  
+  @-webkit-keyframes box1 {
+    0%, 50% {
+      transform: translate(100%, 0);
+    }
+  
+    100% {
+      transform: translate(200%, 0);
+    }
+  }
+  
+  @keyframes box1 {
+    0%, 50% {
+      transform: translate(100%, 0);
+    }
+  
+    100% {
+      transform: translate(200%, 0);
+    }
+  }
+  
+  @-webkit-keyframes box2 {
+    0% {
+      transform: translate(0, 100%);
+    }
+  
+    50% {
+      transform: translate(0, 0);
+    }
+  
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
+  
+  @keyframes box2 {
+    0% {
+      transform: translate(0, 100%);
+    }
+  
+    50% {
+      transform: translate(0, 0);
+    }
+  
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
+  
+  @-webkit-keyframes box3 {
+    0%, 50% {
+      transform: translate(100%, 100%);
+    }
+  
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+  
+  @keyframes box3 {
+    0%, 50% {
+      transform: translate(100%, 100%);
+    }
+  
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+  
+  @-webkit-keyframes box4 {
+    0% {
+      transform: translate(200%, 0);
+    }
+  
+    50% {
+      transform: translate(200%, 100%);
+    }
+  
+    100% {
+      transform: translate(100%, 100%);
+    }
+  }
+  
+  @keyframes box4 {
+    0% {
+      transform: translate(200%, 0);
+    }
+  
+    50% {
+      transform: translate(200%, 100%);
+    }
+  
+    100% {
+      transform: translate(100%, 100%);
+    }
+  }
+
+  /* From Uiverse.io by shadowmurphy */ 
+.input {
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+  
